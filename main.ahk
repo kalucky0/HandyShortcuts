@@ -42,17 +42,29 @@ return
 return
 #IfWinActive
 
-; Makes selected text uppercase [Alt + P]
-!p::
+; Makes selected text uppercase [Ctrl + Shift + U]
+^+u::
+    oCB := ClipboardAll ; save clipboard contents
+    Clipboard = ; Ensure we don't catch old clipboard contents when nothing was selected.
+    sleep 50
     Send, ^x
-    StringUpper, selection, clipboard
-    SendInput %selection%
+    sleep 50
+    StringUpper, Clipboard, Clipboard
+    SendInput ^v
+    Clipboard := oCB ; return original Clipboard contents
+    oCB = ; free memory (mostly usefull when you had a file or so in your Clipboard)
 return
 
-; Makes selected text lowercase [Alt + L]
-!l::
+; Makes selected text lowercase [Ctrl + Shift + L]
+^+l::
+    oCB := ClipboardAll ; save clipboard contents
+    Clipboard = ; Ensure we don't catch old clipboard contents when nothing was selected.
+    sleep 50
     Send, ^x
-    StringLower, selection, clipboard
-    SendInput %selection%
+    sleep 50
+    StringLower, Clipboard, Clipboard
+    SendInput ^v
+    Clipboard := oCB ; return original Clipboard contents
+    oCB = ; free memory (mostly usefull when you had a file or so in your Clipboard)
 return
 

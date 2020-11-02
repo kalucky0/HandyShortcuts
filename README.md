@@ -9,10 +9,10 @@ A simple script made with [AutoHotKey](https://www.autohotkey.com) to make you l
 |Shortcut|Description|
 |-|-|
 |Ctrl + Shift + C|Searches highlighted text in Google|
+|Ctrl + Shift + U|Makes selected text uppercase|
+|Ctrl + Shift + L|Makes selected text lowercase|
 |Middle mouse button|Moves up a folder in File Explorer|
 |Win + Del|Empties recycle bin|
 |Win + Space|Makes current window stay always on top|
 |Win + Y|Toggles file extensions in File Explorer|
 |Win + ScrLk|Suspends shortcuts|
-|Alt + P|Makes selected text uppercase|
-|Alt + L|Makes selected text lowercase|
